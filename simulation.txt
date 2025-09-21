@@ -9,14 +9,21 @@ INIT B = B0
 
 ;Equations
 d/dt(B) = -a * R * B ;guerilla force loss rate
+; d/dt(x1) = -A*x2*x1
+
 d/dt(R) = -c * B   ;regular force loss rate
+; d/dt(x2) = -b*x1
 
 ;Parameters
-B0 = 5000 ;number of odd(guerilla force) men   
+B0 = 100 ;number of odd(guerilla force) men   
+; x1
 
 R0 = 1000 ;number of even(regular force) men   
+;x2
 
-a = 0.0005 ;combat effectiveness of odd (guerilla force)
+a = 0.00001 ;combat effectiveness of even (regular force)
+;A
 
-c = 0.01  ;combat effectiveness of even (regular force)
+c = 0.05  ;combat effectiveness of odd (guerilla force)
+;b
 	
