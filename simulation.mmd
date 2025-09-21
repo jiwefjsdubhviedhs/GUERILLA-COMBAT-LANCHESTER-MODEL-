@@ -1,0 +1,21 @@
+METHOD RK4         
+STARTTIME = 0 
+STOPTIME = 100  ;100 days
+DT = 0.1   ;time step        
+
+;Initial Conditions
+INIT R = R0       
+INIT B = B0
+
+;Equations
+d/dt(B) = -a * R * B
+d/dt(R) = -c * B   
+
+;Parameters
+B0 = 5000 ;number of even(regular force) men
+
+R0 = 1000 ;number of odd(guerilla force) men   
+
+a = 0.0005 ;combat effectiveness of even (regular force)
+
+c = 0.01  ;combat effectiveness of odd (guerilla force)
